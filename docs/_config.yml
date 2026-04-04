@@ -1,0 +1,36 @@
+title: "The Sandusky Dyslipidemia Model"
+description: "A comprehensive clinical model for outpatient dyslipidemia management based on the 2026 ACC/AHA/Multisociety Guidelines"
+theme: just-the-docs
+url: ""
+baseurl: ""
+
+# Mermaid diagram support
+mermaid:
+  version: "11.4.1"
+
+# Search
+search_enabled: true
+search.heading_level: 3
+
+# Footer
+footer_content: "&copy; 2026 The Sandusky Dyslipidemia Model. For clinical decision support only. Not a substitute for clinical judgment."
+
+# Aux links (top right)
+aux_links:
+  "View on GitHub": "https://github.com/gkoromia/sandusky-dyslipidemia-model"
+
+# Color scheme
+color_scheme: light
+
+# Favicon
+favicon_ico: "/favicon.svg"
+
+# Exclude non-docs files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - "*.code-workspace"
+  - firebase-debug.log
+  - CLAUDE.md
