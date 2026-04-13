@@ -1,6 +1,3 @@
-# Project files
-sandusky-dyslipidemia-model.code-workspace
-
 # Firebase
 firebase-debug.log
 .firebaserc
@@ -21,3 +18,10 @@ Thumbs.db
 .vscode/
 *.swp
 *~
+
+# Claude
+.claude/
+CLAUDE.md
+
+# Workspace
+*.code-workspace
