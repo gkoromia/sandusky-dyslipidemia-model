@@ -1,0 +1,23 @@
+# Project files
+sandusky-dyslipidemia-model.code-workspace
+
+# Firebase
+firebase-debug.log
+.firebaserc
+firebase.json
+
+# Jekyll / Ruby (docs/)
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+docs/Gemfile.lock
+docs/vendor/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*~
