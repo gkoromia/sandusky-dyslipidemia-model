@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Glossary
-nav_order: 7
+nav_order: 8
 version: "1.0.0"
 last_updated: "2026-03-30"
 ---

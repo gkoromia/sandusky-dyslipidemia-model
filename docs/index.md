@@ -73,18 +73,36 @@ JavaScript-based clinical decision support tools, including the AHA PREVENT risk
 {: .text-purple-300 }
 Plain-language educational handouts for patients.
 
-## 5.0 Disclaimers
+<!-- LIPIDOLOGY-TEASER:START -->
+## 5.0 Latest in Lipidology
+
+Ongoing surveillance of new lipidology evidence, regulatory actions, and
+guideline developments relevant to this clinic.
+
+### [Latest in Lipidology]({% link lipidology/index.md %})
+
+{: .text-purple-300 }
+Summaries of practice-relevant lipid literature, updated as it appears.
+
+Most recent updates:
+
+- [The first PCSK9 pill is approved. The outcome trial is still running.]({% link lipidology/2026-08-20-the-first-pcsk9-pill-is-approved-the-outcome-trial-is-still.md %}) — 2026-08-20
+
+<!-- LIPIDOLOGY-TEASER:END -->
+
+## 6.0 Disclaimers
 
 - This model is intended for **clinical decision support only** and does not replace individualized clinical judgment.
 - Telemedicine is not currently offered but may be added in future versions to expand access.
 - Electronic health record (EHR) integration is not currently available.
 - Patient materials are currently available in **English only**. Additional languages may be added in future versions to expand access.
 
-## 6.0 Version History
+## 7.0 Version History
 
 | Version | Date       | Description     |
 | :------ | :--------- | :-------------- |
 | 1.0.0   | 2026-03-30 | Initial release |
+| 1.0.1   | 2026-08-20 | Latest in Lipidology updates |
 
 ---
 
