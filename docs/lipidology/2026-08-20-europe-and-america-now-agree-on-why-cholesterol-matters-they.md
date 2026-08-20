@@ -2,7 +2,7 @@
 layout: default
 title: "Europe and America now agree on why cholesterol matters. They still differ on how to act on it. (2026-08-20)"
 parent: Latest in Lipidology
-nav_order: 73041101
+nav_order: 73041198
 version: "1.0.0"
 last_updated: "2026-08-20"
 ---
