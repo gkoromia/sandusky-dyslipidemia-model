@@ -23,5 +23,6 @@ clinic. Each entry summarizes primary sources and links to them directly.
 <!-- LIPIDOLOGY-INDEX:START -->
 | Date | Update |
 | :--- | :----- |
+| 2026-08-20 | [Europe and America now agree on why cholesterol matters. They still differ on how to act on it.]({% link lipidology/2026-08-20-europe-and-america-now-agree-on-why-cholesterol-matters-they.md %}) |
 | 2026-08-20 | [The first PCSK9 pill is approved. The outcome trial is still running.]({% link lipidology/2026-08-20-the-first-pcsk9-pill-is-approved-the-outcome-trial-is-still.md %}) |
 <!-- LIPIDOLOGY-INDEX:END -->
