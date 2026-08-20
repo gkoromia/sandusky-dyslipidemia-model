@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Two out of three people having a first heart attack were not on a statin"
+title: "Two out of three people having a first heart attack were not on a statin (2026-08-20)"
 parent: Latest in Lipidology
 nav_order: 73041102
 version: "1.0.0"

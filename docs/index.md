@@ -23,18 +23,7 @@ The Sandusky Dyslipidemia Model provides a structured, evidence-based framework 
 
 This model adheres strictly to the **2026 ACC/AHA/Multisociety Guidelines on the Management of Dyslipidemia** [1] as its foundation. Beyond the guideline framework, the model adopts a **"lower is better"** philosophy for atherogenic lipoproteins, using advanced tools — including apolipoprotein B (ApoB), advanced lipid fractionation, lipoprotein(a), and coronary artery calcium (CAC) scoring — to identify patients at increased residual risk and to drive more aggressive lipid control where clinically appropriate.
 
-## 3.0 Clinic Structure
-
-| Parameter              | Detail                                                 |
-| :--------------------- | :----------------------------------------------------- |
-| **Clinic Name**        | The Sandusky Dyslipidemia Model                        |
-| **Staffing**           | 1 Physician (MD/DO) + 1 Nurse Practitioner (NP)        |
-| **New Patient Visit**  | 40 minutes                                             |
-| **Follow-Up Visit**    | 20 minutes                                             |
-| **Patient Population** | Adults ≥ 18 years referred for dyslipidemia management |
-| **Referral Sources**   | Primary care, cardiology, neurology, endocrinology     |
-
-## 4.0 Document Structure
+## 3.0 Document Structure
 
 This model is organized into four sections:
 
@@ -74,7 +63,7 @@ JavaScript-based clinical decision support tools, including the AHA PREVENT risk
 Plain-language educational handouts for patients.
 
 <!-- LIPIDOLOGY-TEASER:START -->
-## 5.0 Latest in Lipidology
+## 4.0 Latest in Lipidology
 
 Ongoing surveillance of new lipidology evidence, regulatory actions, and
 guideline developments relevant to this clinic.
@@ -92,6 +81,23 @@ Most recent updates:
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
+---
+
+## 5.0 Author & Attributions
+
+**George Augustine Koromia, MD, MMCi, FACC**
+
+Contact: g [at] koromia [dot] com
+
+Website: [https://www.koromia.com](https://www.koromia.com)
+
+| Area                                         | Attribution                                                 |
+| :------------------------------------------- | :---------------------------------------------------------- |
+| Content & Editing                            | George Augustine Koromia, MD, MMCi, FACC                    |
+| Clinical guideline text                      | Copyrighted by the original guideline writing organizations |
+
+---
+
 ## 6.0 Disclaimers
 
 - This model is intended for **clinical decision support only** and does not replace individualized clinical judgment.
@@ -105,22 +111,6 @@ Most recent updates:
 | :------ | :--------- | :-------------- |
 | 1.0.0   | 2026-03-30 | Initial release |
 | 1.0.1   | 2026-08-20 | Latest in Lipidology updates |
-
----
-
-## Author & Attributions
-
-**George Augustine Koromia, MD, MMCi, FACC**
-
-Contact: g [at] koromia [dot] com
-
-Website: [https://www.koromia.com](https://www.koromia.com)
-
-| Area                                         | Attribution                                                 |
-| :------------------------------------------- | :---------------------------------------------------------- |
-| Content & Editing                            | George Augustine Koromia, MD, MMCi, FACC                    |
-| Clinical guideline text                      | Copyrighted by the original guideline writing organizations |
-| Technical setup, UI & web tooling            | Claude AI models                                            |
 
 ---
 

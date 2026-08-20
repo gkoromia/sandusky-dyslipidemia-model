@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The first PCSK9 pill is approved. The outcome trial is still running."
+title: "The first PCSK9 pill is approved. The outcome trial is still running. (2026-08-20)"
 parent: Latest in Lipidology
 nav_order: 73041100
 version: "1.0.0"
