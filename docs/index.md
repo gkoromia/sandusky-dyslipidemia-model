@@ -75,7 +75,7 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
-- [Two out of three people having a first heart attack were not on a statin]({% link lipidology/2026-08-20-two-out-of-three-people-having-a-first-heart-attack-were-not.md %}) — 2026-08-20
+- [Lp(a) treatment is now being tested in people who have not yet had a heart attack]({% link lipidology/2026-08-23-lp-a-treatment-is-now-being-tested-in-people-who-have-not-ye.md %}) — 2026-08-24
 - [Europe and America now agree on why cholesterol matters. They still differ on how to act on it.]({% link lipidology/2026-08-20-europe-and-america-now-agree-on-why-cholesterol-matters-they.md %}) — 2026-08-20
 - [The first PCSK9 pill is approved. The outcome trial is still running.]({% link lipidology/2026-08-20-the-first-pcsk9-pill-is-approved-the-outcome-trial-is-still.md %}) — 2026-08-20
 
@@ -110,6 +110,7 @@ Website: [https://www.koromia.com](https://www.koromia.com)
 | Version | Date       | Description     |
 | :------ | :--------- | :-------------- |
 | 1.0.0   | 2026-03-30 | Initial release |
+| 1.0.1   | 2026-08-24 | Latest in Lipidology updates |
 | 1.0.1   | 2026-08-20 | Latest in Lipidology updates |
 
 ---
