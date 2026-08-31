@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [PCSK9 inhibitors lower LDL after a heart transplant, but the graft benefit is unproven]({% link lipidology/2026-08-30-pcsk9-inhibitors-lower-ldl-after-a-heart-transplant-but-the.md %}) — 2026-08-31
 - [When Lp(a) is high, a standard apoB result understates the risk]({% link lipidology/2026-08-30-when-lp-a-is-high-a-standard-apob-result-understates-the-ris.md %}) — 2026-08-31
 - [Lp(a) treatment is now being tested in people who have not yet had a heart attack]({% link lipidology/2026-08-23-lp-a-treatment-is-now-being-tested-in-people-who-have-not-ye.md %}) — 2026-08-24
-- [Europe and America now agree on why cholesterol matters. They still differ on how to act on it.]({% link lipidology/2026-08-20-europe-and-america-now-agree-on-why-cholesterol-matters-they.md %}) — 2026-08-20
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
