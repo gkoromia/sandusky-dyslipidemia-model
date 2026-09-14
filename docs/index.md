@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [Lowering LDL fast after a heart attack gets more patients to goal, but one year showed no fewer events]({% link lipidology/2026-09-14-lowering-ldl-fast-after-a-heart-attack-gets-more-patients-to.md %}) — 2026-09-14
 - [A statin cut heart attacks in healthy people over 70 but did not help them live longer without disability]({% link lipidology/2026-09-14-a-statin-cut-heart-attacks-in-healthy-people-over-70-but-did.md %}) — 2026-09-14
 - [PCSK9 inhibitors lower LDL after a heart transplant, but the graft benefit is unproven]({% link lipidology/2026-08-30-pcsk9-inhibitors-lower-ldl-after-a-heart-transplant-but-the.md %}) — 2026-08-31
-- [When Lp(a) is high, a standard apoB result understates the risk]({% link lipidology/2026-08-30-when-lp-a-is-high-a-standard-apob-result-understates-the-ris.md %}) — 2026-08-31
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
