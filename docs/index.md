@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [A statin cut heart attacks in healthy people over 70 but did not help them live longer without disability]({% link lipidology/2026-09-14-a-statin-cut-heart-attacks-in-healthy-people-over-70-but-did.md %}) — 2026-09-14
 - [PCSK9 inhibitors lower LDL after a heart transplant, but the graft benefit is unproven]({% link lipidology/2026-08-30-pcsk9-inhibitors-lower-ldl-after-a-heart-transplant-but-the.md %}) — 2026-08-31
 - [When Lp(a) is high, a standard apoB result understates the risk]({% link lipidology/2026-08-30-when-lp-a-is-high-a-standard-apob-result-understates-the-ris.md %}) — 2026-08-31
-- [Lp(a) treatment is now being tested in people who have not yet had a heart attack]({% link lipidology/2026-08-23-lp-a-treatment-is-now-being-tested-in-people-who-have-not-ye.md %}) — 2026-08-24
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
@@ -110,6 +110,7 @@ Website: [https://www.koromia.com](https://www.koromia.com)
 | Version | Date       | Description     |
 | :------ | :--------- | :-------------- |
 | 1.0.0   | 2026-03-30 | Initial release |
+| 1.0.1   | 2026-09-14 | Latest in Lipidology updates |
 | 1.0.1   | 2026-08-31 | Latest in Lipidology updates |
 | 1.0.1   | 2026-08-24 | Latest in Lipidology updates |
 | 1.0.1   | 2026-08-20 | Latest in Lipidology updates |
