@@ -3,8 +3,8 @@ layout: default
 title: "02 — Patient Eligibility"
 parent: Clinical
 nav_order: 2
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-09-17"
 ---
 
 # 02 — Patient Eligibility
@@ -34,7 +34,7 @@ Patients meeting **any one** of the following criteria are eligible for referral
 | **2.1.1** Elevated LDL-C despite therapy | LDL-C above goal per 2026 ACC/AHA guidelines [1] after adequate trial of first-line therapy |
 | **2.1.2** Severe hypercholesterolemia | LDL-C ≥ 190 mg/dL (any age ≥ 18) |
 | **2.1.3** Suspected familial hypercholesterolemia | Clinical features, family history, or Dutch Lipid Clinic Network Score ≥ 6 [2] |
-| **2.1.4** Severe hypertriglyceridemia | Fasting triglycerides ≥ 500 mg/dL (pancreatitis risk management) |
+| **2.1.4** Severe hypertriglyceridemia | Fasting triglycerides ≥ 500 mg/dL (pancreatitis risk management). Persistent chylomicronemia despite dietary fat restriction, or recurrent pancreatitis, raises suspicion for familial chylomicronemia syndrome (FCS) and warrants genetic testing (see [05 — Treatment Pathways, Section 9.4]({% link clinical/05-treatment-pathways.md %}#94-apoc3-silencing-plozasiran-redemplo)) |
 | **2.1.5** Mixed dyslipidemia | Combined hyperlipidemia requiring multi-agent therapy |
 
 ### 2.2 Risk-Based Referrals
@@ -101,6 +101,7 @@ Patients scheduled for a new visit are instructed to:
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-09-17 | Criterion 2.1.4: added FCS suspicion and genetic testing |
 
 ---
 

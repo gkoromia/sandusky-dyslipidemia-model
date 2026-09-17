@@ -3,8 +3,8 @@ layout: default
 title: "05 — Treatment Pathways"
 parent: Clinical
 nav_order: 5
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-09-17"
 ---
 
 # 05 — Treatment Pathways
@@ -256,6 +256,7 @@ Fibrates (PPARα agonists) primarily lower triglycerides and modestly raise HDL-
 |:-----------|:------|
 | Severe hypertriglyceridemia (TG ≥ 500 mg/dL) | Primary goal is pancreatitis prevention, not ASCVD reduction |
 | Persistent moderate hypertriglyceridemia (TG 200–499) despite lifestyle and statin | Limited ASCVD outcomes data; consider only if TG-mediated risk is high |
+| Suspected or confirmed familial chylomicronemia syndrome (FCS) | Refer for genetic evaluation; consider plozasiran (see Section 9.4) |
 
 ### 9.3 Safety Considerations
 
@@ -263,6 +264,22 @@ Fibrates (PPARα agonists) primarily lower triglycerides and modestly raise HDL-
 - **Fenofibrate + statin:** Acceptable combination; fenofibrate does not inhibit statin metabolism [17]
 - **Renal function:** Dose-adjust fenofibrate for eGFR; may reversibly increase creatinine
 - **Cholelithiasis:** Increased risk with fibrate therapy
+
+### 9.4 APOC3 Silencing: Plozasiran (Redemplo)
+
+Plozasiran is a GalNAc-conjugated siRNA that reduces hepatic apolipoprotein C-III synthesis. It is FDA-approved (November 2025) as an adjunct to diet to reduce triglycerides in adults with FCS [22].
+
+| Parameter | Details |
+|:----------|:--------|
+| Indication in this clinic | FCS (genetically confirmed or clinically suspected) with persistent chylomicronemia despite dietary fat restriction; goal is pancreatitis prevention |
+| Dose | 25 mg SC every 3 months |
+| Evidence | PALISADE (n = 75, median baseline TG 2044 mg/dL): median TG change at 10 months −80% (25 mg) vs −17% (placebo); acute pancreatitis OR 0.17 (95% CI 0.03–0.94) [21] |
+| Monitoring | Fasting TG; glycemia in patients with prediabetes or diabetes (hyperglycemia reported in PALISADE) [21] |
+| Not indicated | ASCVD risk reduction; mixed dyslipidemia (TG 150–499 mg/dL) outside a trial, as no outcomes data exist [24] |
+
+- **Multifactorial severe hypertriglyceridemia (non-FCS):** Off-label. SHASTA-2 showed a placebo-adjusted TG reduction of −57% at the highest dose, with 90.6% of treated patients reaching TG < 500 mg/dL [23]. Revisit after full publication of SHASTA-3/4 and any label expansion.
+- **LDL-C:** May rise at higher doses without an increase in ApoB (SHASTA-2, 50 mg: LDL-C +60% placebo-adjusted; non-HDL-C −20%) [23]. Continue to manage atherogenic risk by ApoB and LDL-C per Section 1.0.
+- **Does not replace** statin or other LDL-C-lowering therapy.
 
 ## 10.0 Niacin (Extended-Release)
 
@@ -336,6 +353,7 @@ The following stepwise approach applies to patients not at their risk-appropriat
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-09-17 | Added FCS row to Section 9.2 and Section 9.4 (plozasiran) |
 
 ---
 
@@ -361,3 +379,7 @@ The following stepwise approach applies to patients not at their risk-appropriat
 18. Goldberg AC. A meta-analysis of randomized controlled studies on the effects of extended-release niacin in women. *Am J Cardiol*. 2004;94(1):121–124.
 19. AIM-HIGH Investigators. Niacin in patients with low HDL cholesterol levels receiving intensive statin therapy. *N Engl J Med*. 2011;365(24):2255–2267.
 20. HPS2-THRIVE Collaborative Group. Effects of extended-release niacin with laropiprant in high-risk patients. *N Engl J Med*. 2014;371(3):203–212.
+21. Watts GF, Rosenson RS, Hegele RA, et al. Plozasiran for managing persistent chylomicronemia and pancreatitis risk (PALISADE). *N Engl J Med*. 2025;392(2):127–137.
+22. Syed YY. Plozasiran: first approval. *Drugs*. 2026;86(5):753–758.
+23. Gaudet D, Pall D, Watts GF, et al. Plozasiran (ARO-APOC3) for severe hypertriglyceridemia: the SHASTA-2 randomized clinical trial. *JAMA Cardiol*. 2024;9(7):620–630.
+24. Ballantyne CM, Vasas S, Azizad M, et al. Plozasiran, an RNA interference agent targeting APOC3, for mixed hyperlipidemia (MUIR). *N Engl J Med*. 2024;391(10):899–912.
