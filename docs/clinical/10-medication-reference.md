@@ -3,8 +3,8 @@ layout: default
 title: "10 — Medication Reference"
 parent: Clinical
 nav_order: 10
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-09-17"
 ---
 
 # 10 — Medication Reference
@@ -31,6 +31,7 @@ last_updated: "2026-03-30"
 | ACL Inhibitor + Absorption Inhibitor | Bempedoic acid/ezetimibe | ↓ 35–40% | PO daily | Fixed-dose combination |
 | Purified EPA | Icosapent ethyl | ↓ TG; ASCVD reduction | PO BID | Not a substitute for LDL-C lowering |
 | Fibrate | Fenofibrate, Gemfibrozil | ↓ TG 30–50% | PO daily/BID | Pancreatitis prevention |
+| APOC3 siRNA | Plozasiran (Redemplo) | ↓ TG ~80% in FCS | SC q3 months | FCS only; not for ASCVD risk reduction |
 | Niacin | Extended-release niacin | ↓ 15–25%; ↓ Lp(a) 20–30% | PO QHS | Limited role; last-line |
 
 ## 2.0 Statins
@@ -176,7 +177,7 @@ last_updated: "2026-03-30"
 | Drug interactions | Monitor with anticoagulants (bleeding risk); no significant CYP interactions |
 | Distinction | **Not** interchangeable with OTC fish oil/omega-3 supplements |
 
-## 8.0 Fibrates
+## 8.0 Fibrates and APOC3 Silencing
 
 ### 8.1 Fenofibrate (Tricor / Trilipix)
 
@@ -198,6 +199,19 @@ last_updated: "2026-03-30"
 | **Statin interaction** | **Contraindicated with all statins** due to myopathy/rhabdomyolysis risk [2] |
 | Use | Only when fibrate is needed and patient is NOT on a statin |
 | Monitoring | CK if combined with other medications; hepatic/renal function |
+
+### 8.3 Plozasiran (Redemplo)
+
+| Parameter | Details |
+|:----------|:--------|
+| Mechanism | GalNAc-conjugated siRNA; ↓ hepatic apoC-III synthesis [13] |
+| Dose | 25 mg SC every 3 months |
+| Indication | Adjunct to diet to reduce TG in adults with familial chylomicronemia syndrome (FDA, November 2025) [13] |
+| TG reduction | Median −80% at 10 months vs −17% placebo (PALISADE) [14] |
+| Clinical outcome | ↓ acute pancreatitis, OR 0.17 (95% CI 0.03–0.94) [14] |
+| Common adverse events | Abdominal pain, nasopharyngitis, headache, nausea [14] |
+| Monitoring | Fasting TG; glycemia in patients with prediabetes or diabetes [14]; LDL-C and ApoB (LDL-C may rise without ApoB change at higher doses) [15] |
+| Off-label | Multifactorial severe hypertriglyceridemia (phase 3 data pending full publication); not indicated for mixed dyslipidemia or ASCVD risk reduction [16] |
 
 ## 9.0 Niacin (Extended-Release)
 
@@ -251,6 +265,7 @@ Obicetrapib (CETP inhibitor) and Lp(a)-targeted therapies (muvalaplin, lepodisir
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-09-17 | Added plozasiran (summary table and Section 8.3) |
 
 ---
 
@@ -268,3 +283,7 @@ Obicetrapib (CETP inhibitor) and Lp(a)-targeted therapies (muvalaplin, lepodisir
 10. Bhatt DL, Steg PG, Miller M, et al. Cardiovascular risk reduction with icosapent ethyl for hypertriglyceridemia (REDUCE-IT). *N Engl J Med*. 2019;380(1):11–22.
 11. AIM-HIGH Investigators. Niacin in patients with low HDL cholesterol levels receiving intensive statin therapy. *N Engl J Med*. 2011;365(24):2255–2267.
 12. HPS2-THRIVE Collaborative Group. Effects of extended-release niacin with laropiprant in high-risk patients. *N Engl J Med*. 2014;371(3):203–212.
+13. Syed YY. Plozasiran: first approval. *Drugs*. 2026;86(5):753–758.
+14. Watts GF, Rosenson RS, Hegele RA, et al. Plozasiran for managing persistent chylomicronemia and pancreatitis risk (PALISADE). *N Engl J Med*. 2025;392(2):127–137.
+15. Gaudet D, Pall D, Watts GF, et al. Plozasiran (ARO-APOC3) for severe hypertriglyceridemia: the SHASTA-2 randomized clinical trial. *JAMA Cardiol*. 2024;9(7):620–630.
+16. Ballantyne CM, Vasas S, Azizad M, et al. Plozasiran, an RNA interference agent targeting APOC3, for mixed hyperlipidemia (MUIR). *N Engl J Med*. 2024;391(10):899–912.
