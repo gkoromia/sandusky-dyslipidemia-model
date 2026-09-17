@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
-- [Lowering LDL fast after a heart attack gets more patients to goal, but one year showed no fewer events]({% link lipidology/2026-09-14-lowering-ldl-fast-after-a-heart-attack-gets-more-patients-to.md %}) — 2026-09-14
+- [Plozasiran (Redemplo) is approved for an inherited triglyceride disorder, but its use in common dyslipidemia is still unproven]({% link lipidology/2026-09-17-plozasiran-redemplo-is-approved-for-an-inherited-triglycerid.md %}) — 2026-09-17
 - [A statin cut heart attacks in healthy people over 70 but did not help them live longer without disability]({% link lipidology/2026-09-14-a-statin-cut-heart-attacks-in-healthy-people-over-70-but-did.md %}) — 2026-09-14
-- [PCSK9 inhibitors lower LDL after a heart transplant, but the graft benefit is unproven]({% link lipidology/2026-08-30-pcsk9-inhibitors-lower-ldl-after-a-heart-transplant-but-the.md %}) — 2026-08-31
+- [Lowering LDL fast after a heart attack gets more patients to goal, but one year showed no fewer events]({% link lipidology/2026-09-14-lowering-ldl-fast-after-a-heart-attack-gets-more-patients-to.md %}) — 2026-09-14
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
@@ -110,6 +110,7 @@ Website: [https://www.koromia.com](https://www.koromia.com)
 | Version | Date       | Description     |
 | :------ | :--------- | :-------------- |
 | 1.0.0   | 2026-03-30 | Initial release |
+| 1.0.1   | 2026-09-17 | Latest in Lipidology updates |
 | 1.0.1   | 2026-09-14 | Latest in Lipidology updates |
 | 1.0.1   | 2026-08-31 | Latest in Lipidology updates |
 | 1.0.1   | 2026-08-24 | Latest in Lipidology updates |
