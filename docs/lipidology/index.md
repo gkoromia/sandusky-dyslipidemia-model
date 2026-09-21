@@ -4,7 +4,7 @@ title: Latest in Lipidology
 nav_order: 6
 has_children: true
 version: "1.0.0"
-last_updated: "2026-09-17"
+last_updated: "2026-09-21"
 ---
 
 # Latest in Lipidology
