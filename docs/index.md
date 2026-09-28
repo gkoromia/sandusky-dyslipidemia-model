@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [The 2026 cholesterol guideline tells doctors to keep statins going through cancer care]({% link lipidology/2026-09-27-the-2026-cholesterol-guideline-tells-doctors-to-keep-statins.md %}) — 2026-09-28
 - [A coronary calcium scan adds little to the new risk calculator except near the treatment line]({% link lipidology/2026-09-20-a-coronary-calcium-scan-adds-little-to-the-new-risk-calculat.md %}) — 2026-09-21
 - [Plozasiran (Redemplo) is approved for an inherited triglyceride disorder, but its use in common dyslipidemia is still unproven]({% link lipidology/2026-09-17-plozasiran-redemplo-is-approved-for-an-inherited-triglycerid.md %}) — 2026-09-17
-- [A statin cut heart attacks in healthy people over 70 but did not help them live longer without disability]({% link lipidology/2026-09-14-a-statin-cut-heart-attacks-in-healthy-people-over-70-but-did.md %}) — 2026-09-14
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
@@ -110,6 +110,7 @@ Website: [https://www.koromia.com](https://www.koromia.com)
 | Version | Date       | Description     |
 | :------ | :--------- | :-------------- |
 | 1.0.0   | 2026-03-30 | Initial release |
+| 1.0.1   | 2026-09-28 | Latest in Lipidology updates |
 | 1.0.1   | 2026-09-21 | Latest in Lipidology updates |
 | 1.0.1   | 2026-09-17 | Latest in Lipidology updates |
 | 1.0.1   | 2026-09-14 | Latest in Lipidology updates |
