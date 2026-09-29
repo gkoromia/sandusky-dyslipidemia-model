@@ -41,11 +41,11 @@ Contact: g [at] koromia [dot] com
 
 Website: [https://www.koromia.com](https://www.koromia.com)
 
-| Area                                         | Attribution                                                 |
+| Role                                         | Attribution                                                 |
 | :------------------------------------------- | :---------------------------------------------------------- |
 | Content & Editing                            | George Augustine Koromia, MD, MMCi, FACC                    |
 | Clinical guideline text                      | Copyrighted by the original guideline writing organizations |
-| Technical setup, UI & web tooling            | Claude AI models                                            |
+| UI & web tooling                             | Claude AI models                                            |
 
 ## Disclaimer
 
