@@ -105,20 +105,6 @@ Website: [https://www.koromia.com](https://www.koromia.com)
 - Electronic health record (EHR) integration is not currently available.
 - Patient materials are currently available in **English only**. Additional languages may be added in future versions to expand access.
 
-## 7.0 Version History
-
-| Version | Date       | Description     |
-| :------ | :--------- | :-------------- |
-| 1.0.8   | 2026-09-29 | Workflow diagrams redesigned for readability; attribution table updated |
-| 1.0.7   | 2026-09-28 | Latest in Lipidology updates |
-| 1.0.6   | 2026-09-21 | Latest in Lipidology updates |
-| 1.0.5   | 2026-09-17 | Latest in Lipidology updates |
-| 1.0.4   | 2026-09-14 | Latest in Lipidology updates |
-| 1.0.3   | 2026-08-31 | Latest in Lipidology updates |
-| 1.0.2   | 2026-08-24 | Latest in Lipidology updates |
-| 1.0.1   | 2026-08-20 | Latest in Lipidology updates |
-| 1.0.0   | 2026-03-30 | Initial release |
-
 ---
 
 ## References
