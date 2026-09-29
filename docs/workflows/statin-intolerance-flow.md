@@ -3,8 +3,8 @@ layout: default
 title: "Statin Intolerance Flow"
 parent: Workflows
 nav_order: 6
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-09-29"
 ---
 
 # Statin Intolerance Pathway Flowchart
@@ -13,73 +13,119 @@ Visual representation of the statin intolerance evaluation and management pathwa
 
 ---
 
+The pathway is split into four charts: ruling out secondary causes, checking the CK level, the one-time rechallenge, and the statin-free regimen.
+
+{% include workflow_legend.html %}
+
+## Part 1 — Evaluation and Secondary Causes
+
 ```mermaid
 flowchart TD
-    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#ffffff
-    classDef assess fill:#264653,stroke:#1d3557,color:#ffffff
-    classDef caution fill:#e76f51,stroke:#c1440e,color:#ffffff
-    classDef urgent fill:#d62828,stroke:#9d0208,color:#ffffff
-    classDef admin fill:#6c757d,stroke:#495057,color:#ffffff
-    classDef outcome fill:#2196F3,stroke:#1565C0,color:#ffffff
-    classDef success fill:#52b788,stroke:#2d6a4f,color:#ffffff
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    REPORT[Patient Reports\nStatin Intolerance]:::entry
+    REPORT[Patient Reports<br>Statin Intolerance]:::entry
 
-    REPORT --> EVAL[Characterize\nSymptoms]:::assess
-    EVAL --> SECONDARY[Rule Out Secondary\nCauses of Myalgia]:::assess
+    REPORT --> EVAL[Characterize<br>Symptoms]:::assess
+    EVAL --> SECONDARY[Rule Out Secondary<br>Causes of Myalgia]:::assess
 
-    SECONDARY --> SECCHECK{Secondary\nCause Found?}
-    SECCHECK -->|Yes — Hypothyroid,\nVit D deficiency,\ndrug interaction, etc.| TREAT_SEC[Address Secondary\nCause First]:::caution
-    TREAT_SEC --> RETRY[Reattempt Original\nStatin After\nCause Resolved]:::assess
-    RETRY --> RETRY_RESULT{Tolerated\nNow?}
-    RETRY_RESULT -->|Yes| CONTINUE[Continue Statin\nTherapy]:::success
-    RETRY_RESULT -->|No| RECHALLENGE
+    SECONDARY --> SECCHECK{Secondary<br>Cause Found?}
+    SECCHECK -->|Yes — Hypothyroid,<br>Vit D deficiency,<br>drug interaction, etc.| TREAT_SEC[Address Secondary<br>Cause First]:::caution
+    TREAT_SEC --> RETRY[Reattempt Original<br>Statin After<br>Cause Resolved]:::assess
+    RETRY --> RETRY_RESULT{Tolerated<br>Now?}
+    RETRY_RESULT -->|Yes| CONTINUE[Continue Statin<br>Therapy]:::entry
+    RETRY_RESULT -->|No| RC[Part 3:<br>One-Time Rechallenge]:::link
 
-    SECCHECK -->|No secondary\ncause identified| CK_CHECK{CK Level?}
+    SECCHECK -->|No secondary<br>cause identified| CK[Continue to Part 2:<br>CK Level]:::link
+```
 
-    CK_CHECK -->|CK > 10× ULN| RHABDO[Discontinue Statin\nIV Fluids\nMonitor Renal Function]:::urgent
-    CK_CHECK -->|CK 4–10× ULN| MYOPATHY[True Myopathy\nDiscontinue Statin\nRecheck CK 2–4 weeks]:::caution
-    CK_CHECK -->|CK < 4× ULN\nor not checked| MYALGIA[Myalgia Without\nMyopathy\nMost Common]:::assess
+## Part 2 — CK Level
 
-    MYOPATHY --> WAIT[Wait for CK\nNormalization]:::admin
-    WAIT --> RECHALLENGE
-    MYALGIA --> RECHALLENGE
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    subgraph RECHALLENGE [One-Time Rechallenge]
-        RC_START[Select Different Statin\nPrefer rosuvastatin\nor pitavastatin]:::assess
-        RC_START --> RC_DOSE[Start Lowest\nAvailable Dose\nConsider alternate-day]:::assess
-        RC_DOSE --> RC_TRIAL[Trial Period\n4–8 weeks]:::admin
-        RC_TRIAL --> RC_CHECK[Assess\nTolerability]:::assess
-    end
+    CK_CHECK{CK Level?}
+
+    CK_CHECK -->|CK > 10× ULN| RHABDO[Discontinue Statin<br>IV Fluids<br>Monitor Renal Function]:::urgent
+    CK_CHECK -->|CK 4–10× ULN| MYOPATHY[True Myopathy<br>Discontinue Statin<br>Recheck CK 2–4 weeks]:::caution
+    CK_CHECK -->|"CK &lt; 4× ULN<br>or not checked"| MYALGIA[Myalgia Without<br>Myopathy<br>Most Common]:::assess
+
+    MYOPATHY --> WAIT[Wait for CK<br>Normalization]:::admin
+    WAIT --> RC[Part 3:<br>One-Time Rechallenge]:::link
+    MYALGIA --> RC
+
+    RHABDO --> RHABDO_RESOLVE[After Recovery:<br>Do NOT rechallenge<br>Proceed directly to<br>Statin-Free Regimen]:::caution
+    RHABDO_RESOLVE --> SF[Part 4:<br>Statin-Free Regimen]:::link
+```
+
+## Part 3 — One-Time Rechallenge
+
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
+
+    IN[From Part 1 or 2:<br>myalgia, resolved myopathy,<br>or failed retry]:::link --> RC_START
+
+    RC_START[Select Different Statin<br>Prefer rosuvastatin<br>or pitavastatin]:::assess
+    RC_START --> RC_DOSE[Start Lowest<br>Available Dose<br>Consider alternate-day]:::treat
+    RC_DOSE --> RC_TRIAL[Trial Period<br>4–8 weeks]:::admin
+    RC_TRIAL --> RC_CHECK[Assess<br>Tolerability]:::assess
 
     RC_CHECK --> RC_RESULT{Tolerated?}
 
-    RC_RESULT -->|Yes| TITRATE[Titrate to Highest\nTolerated Dose]:::success
-    TITRATE --> LIPIDS1[Recheck Lipids\n+ ApoB 4–8 weeks]:::admin
+    RC_RESULT -->|Yes| TITRATE[Titrate to Highest<br>Tolerated Dose]:::entry
+    TITRATE --> LIPIDS1[Recheck Lipids<br>+ ApoB 4–8 weeks]:::admin
     LIPIDS1 --> GOAL1{At Target?}
-    GOAL1 -->|Yes| MAINTAIN[Maintain Regimen]:::success
-    GOAL1 -->|No| ADD_EZE[Add Ezetimibe\n10 mg daily]:::outcome
+    GOAL1 -->|Yes| MAINTAIN[Maintain Regimen]:::entry
+    GOAL1 -->|No| ADD_EZE[Add Ezetimibe<br>10 mg daily]:::treat
 
-    RC_RESULT -->|No| CONFIRMED[Confirmed Statin\nIntolerance\nDocument per\nSection 6.0]:::caution
+    RC_RESULT -->|No| CONFIRMED[Confirmed Statin<br>Intolerance<br>Document per<br>Section 6.0]:::caution
+    CONFIRMED --> SF[Part 4:<br>Statin-Free Regimen]:::link
+```
 
-    CONFIRMED --> STATIN_FREE
+## Part 4 — Statin-Free Regimen
 
-    subgraph STATIN_FREE [Statin-Free Regimen]
-        SF1[Start Ezetimibe 10 mg\n+ Bempedoic Acid 180 mg\nor Nexlizet combo]:::outcome
-        SF1 --> SF_LABS[Recheck Lipids\n+ ApoB 4–8 weeks]:::admin
-        SF_LABS --> SF_GOAL{At Target?}
-        SF_GOAL -->|Yes| SF_MAINTAIN[Maintain\nStatin-Free Regimen]:::success
-        SF_GOAL -->|No| SF_ESCALATE[Add PCSK9i\nor Inclisiran]:::outcome
-    end
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    SF_ESCALATE --> PA[Prior Authorization\nRequired]:::admin
-    PA --> SF_LABS2[Recheck Lipids\n+ ApoB 4–8 weeks]:::admin
+    IN[From Part 2 after rhabdomyolysis,<br>or Part 3 confirmed intolerance]:::link --> SF1
+
+    SF1[Start Ezetimibe 10 mg<br>+ Bempedoic Acid 180 mg<br>or Nexlizet combo]:::treat
+    SF1 --> SF_LABS[Recheck Lipids<br>+ ApoB 4–8 weeks]:::admin
+    SF_LABS --> SF_GOAL{At Target?}
+    SF_GOAL -->|Yes| SF_MAINTAIN[Maintain<br>Statin-Free Regimen]:::entry
+    SF_GOAL -->|No| SF_ESCALATE[Add PCSK9i<br>or Inclisiran]:::treat
+
+    SF_ESCALATE --> PA[Prior Authorization<br>Required]:::admin
+    PA --> SF_LABS2[Recheck Lipids<br>+ ApoB 4–8 weeks]:::admin
     SF_LABS2 --> SF_GOAL2{At Target?}
-    SF_GOAL2 -->|Yes| SF_FINAL[Maintain\nFull Regimen]:::success
-    SF_GOAL2 -->|No| SF_MAX[Maximum Statin-Free:\nEzetimibe + Bempedoic Acid\n+ PCSK9i or Inclisiran\nReassess adherence & FH]:::urgent
-
-    RHABDO --> RHABDO_RESOLVE[After Recovery:\nDo NOT rechallenge\nProceed directly to\nStatin-Free Regimen]:::caution
-    RHABDO_RESOLVE --> STATIN_FREE
+    SF_GOAL2 -->|Yes| SF_FINAL[Maintain<br>Full Regimen]:::entry
+    SF_GOAL2 -->|No| SF_MAX[Maximum Statin-Free:<br>Ezetimibe + Bempedoic Acid<br>+ PCSK9i or Inclisiran<br>Reassess adherence & FH]:::urgent
 ```
 
 ---
@@ -103,3 +149,4 @@ flowchart TD
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-09-29 | Split into smaller charts so text renders at full size; fixed line breaks that printed as literal escape codes; accessible color palette and shared legend |

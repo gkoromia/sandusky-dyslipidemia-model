@@ -3,8 +3,8 @@ layout: default
 title: "Risk Stratification Flow"
 parent: Workflows
 nav_order: 2
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-09-29"
 ---
 
 # Risk Stratification Flowchart
@@ -13,74 +13,154 @@ Visual representation of the risk stratification process described in [04 — Ri
 
 ---
 
+The process is split into six short charts. Parts 1 and 2 sort every patient into a starting risk category. Parts 3–6 continue for patients whose category needs more testing before treatment is decided.
+
+{% include workflow_legend.html %}
+
+## Part 1 — Established ASCVD or LDL-C ≥ 190
+
 ```mermaid
 flowchart TD
-    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#ffffff
-    classDef assess fill:#264653,stroke:#1d3557,color:#ffffff
-    classDef caution fill:#e76f51,stroke:#c1440e,color:#ffffff
-    classDef urgent fill:#d62828,stroke:#9d0208,color:#ffffff
-    classDef admin fill:#6c757d,stroke:#495057,color:#ffffff
-    classDef outcome fill:#2196F3,stroke:#1565C0,color:#ffffff
-    classDef derisk fill:#52b788,stroke:#2d6a4f,color:#ffffff
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    START[Patient Assessed]:::entry --> ASCVD{Established\nASCVD?}
+    START[Patient Assessed]:::entry --> ASCVD{Established<br>ASCVD?}
 
-    ASCVD -->|Yes| VERYHIGH[Very High Risk\nLDL-C < 55 mg/dL\nApoB < 65 mg/dL]:::urgent
-    ASCVD -->|No| LDL190{LDL-C\n≥ 190 mg/dL?}
+    ASCVD -->|Yes| VERYHIGH["Very High Risk<br>LDL-C &lt; 55 mg/dL<br>ApoB &lt; 65 mg/dL"]:::urgent
+    ASCVD -->|No| LDL190{LDL-C<br>≥ 190 mg/dL?}
 
-    LDL190 -->|Yes| FHEVAL[Evaluate for FH\nSee FH Pathway]:::caution
-    FHEVAL --> HIGH[High Risk\nLDL-C < 70 mg/dL\nApoB < 80 mg/dL]:::urgent
-    LDL190 -->|No| PREVENT[Calculate\nPREVENT Risk]:::assess
+    LDL190 -->|Yes| FHEVAL[Evaluate for FH<br>See FH Pathway]:::caution
+    FHEVAL --> HIGH["High Risk<br>LDL-C &lt; 70 mg/dL<br>ApoB &lt; 80 mg/dL"]:::urgent
+    LDL190 -->|No| P2[Continue to Part 2:<br>PREVENT Risk]:::link
 
-    PREVENT --> RISKCAT{10-Year\nRisk Category}
+    VERYHIGH --> TX["Proceed to<br>Treatment Pathway<br>(document 05)"]:::treat
+    HIGH --> TX
+```
 
-    RISKCAT -->|≥ 10%| HIGH
-    RISKCAT -->|5–9.9%| INTERMEDIATE[Intermediate Risk]:::caution
-    RISKCAT -->|3–4.9%| BORDERLINE[Borderline Risk]:::caution
-    RISKCAT -->|< 3%| LOW[Low Risk]:::entry
+## Part 2 — PREVENT Risk Category
 
-    INTERMEDIATE --> ENHANCERS{Risk\nEnhancers\nPresent?}
-    BORDERLINE --> ENHANCERS
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    ENHANCERS -->|Yes, ≥ 1| ADVANCED{Order Advanced\nTesting}:::assess
-    ENHANCERS -->|No| SDM[Shared Decision\nMaking re: Statin]:::assess
+    PREVENT[Calculate<br>PREVENT Risk]:::assess --> RISKCAT{10-Year<br>Risk Category}
+
+    RISKCAT -->|≥ 10%| HIGH["High Risk<br>LDL-C &lt; 70 mg/dL<br>ApoB &lt; 80 mg/dL"]:::urgent
+    RISKCAT -->|5–9.9%| INTERMEDIATE[Intermediate<br>Risk]:::caution
+    RISKCAT -->|3–4.9%| BORDERLINE[Borderline<br>Risk]:::caution
+    RISKCAT -->|"&lt; 3%"| LOW[Low Risk]:::entry
+
+    HIGH --> TX["Proceed to<br>Treatment Pathway<br>(document 05)"]:::treat
+    INTERMEDIATE --> P3[Continue to Part 3:<br>Risk Enhancers]:::link
+    BORDERLINE --> P3
+    LOW --> P6[Continue to Part 6:<br>Confirm Low Risk]:::link
+```
+
+## Part 3 — Risk Enhancers and Advanced Testing
+
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
+
+    IN[Borderline or<br>Intermediate Risk]:::caution --> ENHANCERS{Risk<br>Enhancers<br>Present?}
+
+    ENHANCERS -->|Yes, ≥ 1| ADVANCED[Order Advanced<br>Testing]:::treat
+    ENHANCERS -->|No| SDM[Shared Decision<br>Making re: Statin]:::assess
 
     ADVANCED --> APOB[ApoB]:::assess
-    ADVANCED --> LPA[Lp*a*\nif not done]:::assess
+    ADVANCED --> LPA["Lp(a)<br>if not done"]:::assess
     ADVANCED --> CAC[CAC Score]:::assess
 
-    APOB --> INTEGRATE[Integrate\nAll Results]:::assess
+    APOB --> INTEGRATE[Integrate<br>All Results]:::assess
     LPA --> INTEGRATE
     CAC --> INTEGRATE
+    INTEGRATE --> P4[Continue to Part 4:<br>CAC Result]:::link
 
-    INTEGRATE --> CACRESULT{CAC\nResult?}
+    SDM --> FINALCAT[Assign Final<br>Risk Category]:::treat
+    FINALCAT --> TX["Proceed to<br>Treatment Pathway<br>(document 05)"]:::treat
+```
 
-    CACRESULT -->|CAC = 0| APOBCHECK{ApoB Below\nTarget?}
-    CACRESULT -->|CAC 1–99| UPINT[Reclassify\nUpward]:::caution
-    CACRESULT -->|CAC 100–299| HIGHMOD[High-Intensity\nStatin]:::urgent
-    CACRESULT -->|CAC ≥ 300| HIGHAGG[Aggressive\nLDL-C Lowering\nPer 2026 Guidelines]:::urgent
+## Part 4 — Interpreting the CAC Score
 
-    APOBCHECK -->|Yes| DERISK[De-Risk:\nDefer Statin\nLifestyle Focus]:::derisk
-    APOBCHECK -->|No| TREAT[ApoB Elevated:\nInitiate Therapy\nDespite CAC = 0]:::caution
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    UPINT --> FINALCAT[Assign Final\nRisk Category]:::outcome
+    CACRESULT{CAC<br>Result?}
+
+    CACRESULT -->|CAC = 0| P5[Continue to Part 5:<br>ApoB Check]:::link
+    CACRESULT -->|CAC 1–99| UPINT[Reclassify<br>Upward]:::caution
+    CACRESULT -->|CAC 100–299| HIGHMOD[High-Intensity<br>Statin]:::urgent
+    CACRESULT -->|CAC ≥ 300| HIGHAGG[Aggressive<br>LDL-C Lowering<br>Per 2026 Guidelines]:::urgent
+
+    UPINT --> FINALCAT[Assign Final<br>Risk Category]:::treat
     HIGHMOD --> FINALCAT
     HIGHAGG --> FINALCAT
-    TREAT --> FINALCAT
-    SDM --> FINALCAT
+    FINALCAT --> TX["Proceed to<br>Treatment Pathway<br>(document 05)"]:::treat
+```
 
-    LOW --> LPA2[Measure Lp*a*\nif not done]:::assess
-    LPA2 --> LPARESULT{Lp*a*\n≥ 125 nmol/L?}
-    LPARESULT -->|Yes| ENHANCERS
-    LPARESULT -->|No| LOWFINAL[Confirmed Low Risk\nLifestyle Modification]:::derisk
+## Part 5 — CAC = 0: De-Risking Check
 
-    VERYHIGH --> TX[Proceed to\nTreatment Pathway]:::outcome
-    HIGH --> TX
-    FINALCAT --> TX
-    DERISK --> FOLLOWUP[Follow-Up\nPer Protocol]:::admin
-    LOWFINAL --> FOLLOWUP
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    TX --> TXPATH["See 05 — Treatment\nPathways"]:::outcome
+    CAC0[CAC = 0]:::entry --> APOBCHECK{ApoB Below<br>Target?}
+
+    APOBCHECK -->|Yes| DERISK[De-Risk:<br>Defer Statin<br>Lifestyle Focus]:::entry
+    APOBCHECK -->|No| TREAT[ApoB Elevated:<br>Initiate Therapy<br>Despite CAC = 0]:::caution
+
+    DERISK --> FOLLOWUP[Follow-Up<br>Per Protocol]:::admin
+    TREAT --> FINALCAT[Assign Final<br>Risk Category]:::treat
+    FINALCAT --> TX["Proceed to<br>Treatment Pathway<br>(document 05)"]:::treat
+```
+
+## Part 6 — Confirming Low Risk
+
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
+
+    LOW[Low Risk<br>PREVENT &lt; 3%]:::entry --> LPA2["Measure Lp(a)<br>if not done"]:::assess
+    LPA2 --> LPARESULT{"Lp(a)<br>≥ 125 nmol/L?"}
+    LPARESULT -->|Yes| ENH[Go to Part 3:<br>Evaluate Risk Enhancers]:::link
+    LPARESULT -->|No| LOWFINAL[Confirmed Low Risk<br>Lifestyle Modification]:::entry
+    LOWFINAL --> FOLLOWUP[Follow-Up<br>Per Protocol]:::admin
 ```
 
 ---
@@ -105,3 +185,4 @@ flowchart TD
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-09-29 | Split into smaller charts so text renders at full size; fixed line breaks that printed as literal escape codes; accessible color palette and shared legend |

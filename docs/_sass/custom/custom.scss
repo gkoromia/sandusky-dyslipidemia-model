@@ -1,0 +1,90 @@
+// Site title: the theme's default size wraps "The Sandusky Dyslipidemia Model"
+// onto three lines in the sidebar and clips the first line.
+.site-title {
+  @include mq(md) {
+    font-size: 1.125rem !important;
+    line-height: 1.2;
+  }
+}
+
+// Latest in Lipidology: post titles are full headlines, so keep each sidebar
+// entry to two lines. The full headline is the page's H1.
+.site-nav a.nav-list-link[href^="/lipidology/20"] {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  // Vertical padding would expose the clipped third line, so space with margin
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: $sp-1 0;
+  min-height: 0;
+  line-height: 1.35;
+}
+
+// Workflow diagrams render at their natural size (mermaid_config.js sets
+// useMaxWidth: false) so text is never scaled down. A diagram wider than the
+// column scrolls sideways instead of shrinking.
+pre:has(> code.language-mermaid) {
+  margin: $sp-4 0 $sp-6;
+  padding: 0;
+  overflow-x: auto;
+  background: none;
+  border: 0;
+  text-align: center;
+  white-space: normal;
+}
+
+code.language-mermaid svg {
+  max-width: none;
+  height: auto;
+}
+
+// Diagram color legend (see _includes/workflow_legend.html)
+.workflow-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $sp-2 $sp-4;
+  margin: $sp-4 0;
+  padding: $sp-3 $sp-4;
+  border: $border $border-color;
+  border-radius: $border-radius;
+  font-size: 0.875rem !important;
+  line-height: 1.4;
+
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: $sp-2;
+  }
+
+  .legend-swatch {
+    flex: none;
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 3px;
+    border: 2px solid transparent;
+  }
+
+  .legend-swatch.decision {
+    transform: rotate(45deg) scale(0.8);
+    background: #eef4f7;
+    border-color: #264653;
+    border-radius: 2px;
+  }
+
+  .legend-hint {
+    flex-basis: 100%;
+    color: $grey-dk-100;
+
+    @include mq(md) {
+      display: none;
+    }
+  }
+
+  .legend-swatch.link {
+    background: #fff;
+    border: 2px dashed #264653;
+  }
+}

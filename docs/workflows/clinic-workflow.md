@@ -3,8 +3,8 @@ layout: default
 title: "Clinic Workflow"
 parent: Workflows
 nav_order: 1
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-09-29"
 ---
 
 # Clinic Workflow — Master Flowchart
@@ -14,73 +14,108 @@ This workflow illustrates the end-to-end patient journey through The Sandusky Dy
 
 ---
 
-## Master Clinic Workflow
+## How to Read These Charts
+
+The workflow is split into three charts that follow the patient in order. A dashed box at the end of a chart names the chart that picks up from there.
+
+{% include workflow_legend.html %}
+
+## Part 1 — Referral and Scheduling
 
 ```mermaid
 flowchart TD
-    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#ffffff
-    classDef assess fill:#264653,stroke:#1d3557,color:#ffffff
-    classDef caution fill:#e76f51,stroke:#c1440e,color:#ffffff
-    classDef urgent fill:#d62828,stroke:#9d0208,color:#ffffff
-    classDef admin fill:#6c757d,stroke:#495057,color:#ffffff
-    classDef outcome fill:#2196F3,stroke:#1565C0,color:#ffffff
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    A[Referral Received]:::entry --> B{Eligibility\nScreen}
-    B -->|Meets criteria| C[Schedule New\nPatient Visit]:::admin
-    B -->|Does not meet\ncriteria| D[Return to Referring\nProvider with Explanation]:::admin
+    A[Referral Received]:::entry --> B{Eligibility<br>Screen}
+    B -->|Meets criteria| C[Schedule New<br>Patient Visit]:::admin
+    B -->|Does not meet<br>criteria| D[Return to Referring<br>Provider with Explanation]:::admin
 
-    C --> E{Priority\nAssessment}
-    E -->|Urgent:\nLDL ≥190, post-ACS,\nTG ≥500| F[Schedule within\n2 weeks]:::urgent
-    E -->|Standard| G[Schedule within\n4–6 weeks]:::admin
+    C --> E{Priority<br>Assessment}
+    E -->|Urgent: LDL ≥190,<br>post-ACS, TG ≥500| F[Schedule within<br>2 weeks]:::urgent
+    E -->|Standard| G[Schedule within<br>4–6 weeks]:::admin
 
-    F --> H[Pre-Visit:\nPatient Instructions]:::admin
+    F --> H[Pre-Visit:<br>Patient Instructions]:::admin
     G --> H
 
-    H --> I[Nursing Intake\n10 min]:::admin
-    I --> J[Provider Encounter\n25 min]:::assess
+    H --> I[Nursing Intake<br>10 min]:::admin
+    I --> J[Provider Encounter<br>25 min]:::assess
+    J --> NEXT[Continue to Part 2:<br>Initial Visit]:::link
+```
 
-    J --> K[History &\nPhysical Exam]:::assess
-    K --> L[Review Available\nLabs & Records]:::assess
-    L --> M[Document Risk\nFactors & Enhancers]:::assess
+## Part 2 — Initial Visit and Treatment Plan
 
-    M --> N{PREVENT Risk\nCalculation}:::assess
-    N --> O{Risk Category\nAssignment}
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    O -->|Low risk\nCAC=0 + ApoB neg| P[Consider\nDe-risking]:::entry
-    O -->|Borderline/\nIntermediate| Q[Evaluate Risk\nEnhancers]:::caution
-    O -->|High/Very High\nor ASCVD| R[Aggressive\nTreatment]:::urgent
+    J[Provider Encounter<br>25 min]:::assess --> K[History &<br>Physical Exam]:::assess
+    K --> L[Review Available<br>Labs & Records]:::assess
+    L --> M[Document Risk<br>Factors & Enhancers]:::assess
 
-    P --> S[Lifestyle\nCounseling]:::assess
-    Q --> T{Advanced Testing\nIndicated?}
-    R --> U[Initiate/Optimize\nPharmacotherapy]:::outcome
+    M --> N[PREVENT Risk<br>Calculation]:::assess
+    N --> O{Risk Category<br>Assignment}
 
-    T -->|Yes| V[Order Advanced\nTools]:::outcome
+    O -->|Low risk<br>CAC=0 + ApoB neg| P[Consider<br>De-risking]:::entry
+    O -->|Borderline/<br>Intermediate| Q[Evaluate Risk<br>Enhancers]:::caution
+    O -->|High/Very High<br>or ASCVD| R[Aggressive<br>Treatment]:::urgent
+
+    P --> S[Lifestyle<br>Counseling]:::assess
+    Q --> T{Advanced Testing<br>Indicated?}
+    R --> U[Initiate/Optimize<br>Pharmacotherapy]:::treat
+
+    T -->|Yes| V[Order Advanced<br>Tools]:::treat
     T -->|No| U
-    V --> W[ApoB / NMR /\nLp*a* / CAC]:::assess
-    W --> X[Reassess Risk\nCategory]:::assess
+    V --> W["ApoB / NMR /<br>Lp(a) / CAC"]:::assess
+    W --> X[Reassess Risk<br>Category]:::assess
     X --> U
 
-    U --> Y[Treatment Plan\nDocumented]:::outcome
+    U --> Y[Treatment Plan<br>Documented]:::treat
     S --> Y
 
-    Y --> Z[Order Labs for\nNext Visit]:::admin
-    Z --> AA[Schedule\nFollow-Up]:::admin
+    Y --> Z[Order Labs for<br>Next Visit]:::admin
+    Z --> AA[Schedule<br>Follow-Up]:::admin
+    AA --> NEXT[Continue to Part 3:<br>Follow-Up Cycle]:::link
+```
 
-    AA --> AB{Follow-Up\nType}
-    AB -->|New med or\ndose change| AC[4–8 weeks]:::admin
-    AB -->|Titrating,\nnot stable| AD[3–6 months]:::admin
-    AB -->|At goal,\nstable| AE[Annually]:::admin
+## Part 3 — Follow-Up Cycle
 
-    AC --> AF[Follow-Up Visit\n20 min]:::assess
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
+
+    AA[Schedule<br>Follow-Up]:::admin --> AB{Follow-Up<br>Type}
+    AB -->|New med or<br>dose change| AC[4–8 weeks]:::admin
+    AB -->|Titrating,<br>not stable| AD[3–6 months]:::admin
+    AB -->|At goal,<br>stable| AE[Annually]:::admin
+
+    AC --> AF[Follow-Up Visit<br>20 min]:::assess
     AD --> AF
     AE --> AF
 
-    AF --> AG{At Treatment\nGoal?}
-    AG -->|Yes| AH[Continue Current\nTherapy]:::entry
-    AG -->|No| AI[Escalate per\nTreatment Pathway]:::caution
+    AF --> AG{At Treatment<br>Goal?}
+    AG -->|Yes| AH[Continue Current<br>Therapy]:::entry
+    AG -->|No| AI[Escalate per<br>Treatment Pathway]:::caution
 
     AH --> AA
-    AI --> U
+    AI --> U[Back to Part 2:<br>Initiate/Optimize<br>Pharmacotherapy]:::link
 ```
 
 ## Workflow Cross-References
@@ -114,3 +149,4 @@ The following specialty pathways branch from the master workflow at specific dec
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-09-29 | Split into smaller charts so text renders at full size; fixed line breaks that printed as literal escape codes; accessible color palette and shared legend |

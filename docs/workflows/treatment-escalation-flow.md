@@ -3,8 +3,8 @@ layout: default
 title: "Treatment Escalation Flow"
 parent: Workflows
 nav_order: 3
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-09-29"
 ---
 
 # Treatment Escalation Flowchart
@@ -13,86 +13,141 @@ Visual representation of the stepwise treatment escalation algorithm described i
 
 ---
 
+The algorithm is split into five charts. Each patient moves to the next step only while LDL-C or ApoB remains above target; a patient who reaches target at any step goes to follow-up (Part 5).
+
+{% include workflow_legend.html %}
+
+## Part 1 — Steps 1 and 2: Statin, then Ezetimibe
+
 ```mermaid
 flowchart TD
-    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#ffffff
-    classDef assess fill:#264653,stroke:#1d3557,color:#ffffff
-    classDef caution fill:#e76f51,stroke:#c1440e,color:#ffffff
-    classDef urgent fill:#d62828,stroke:#9d0208,color:#ffffff
-    classDef admin fill:#6c757d,stroke:#495057,color:#ffffff
-    classDef outcome fill:#2196F3,stroke:#1565C0,color:#ffffff
-    classDef success fill:#52b788,stroke:#2d6a4f,color:#ffffff
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    START[Treatment Plan\nInitiated]:::entry --> STEP1
+    START[Treatment Plan<br>Initiated]:::entry --> S1A
 
-    subgraph STEP1 [Step 1: Maximize Statin]
-        S1A[Initiate or uptitrate\nhighest tolerated\nintensity statin]:::assess
-    end
+    S1A[Step 1 — Maximize Statin:<br>initiate or uptitrate<br>highest tolerated<br>intensity statin]:::treat
 
-    STEP1 --> LABS1[Recheck lipids + ApoB\n4–8 weeks]:::admin
-    LABS1 --> GOAL1{LDL-C AND ApoB\nat target?}
+    S1A --> LABS1[Recheck lipids + ApoB<br>4–8 weeks]:::admin
+    LABS1 --> GOAL1{LDL-C AND ApoB<br>at target?}
 
-    GOAL1 -->|Yes| MAINTAIN1[Continue Current\nTherapy]:::success
-    GOAL1 -->|No| INTOL1{Statin\nIntolerant?}
+    GOAL1 -->|Yes| MAINTAIN1[Continue Current<br>Therapy]:::entry
+    GOAL1 -->|No| INTOL1{Statin<br>Intolerant?}
 
-    INTOL1 -->|Yes| SINPATH[See Statin\nIntolerance Pathway]:::caution
-    INTOL1 -->|No| STEP2
+    INTOL1 -->|Yes| SINPATH[See Statin<br>Intolerance Pathway]:::caution
+    INTOL1 -->|No| S2A
 
-    subgraph STEP2 [Step 2: Add Ezetimibe]
-        S2A[Add ezetimibe\n10 mg daily]:::assess
-    end
+    S2A[Step 2 — Add Ezetimibe:<br>ezetimibe 10 mg daily]:::treat
 
-    STEP2 --> LABS2[Recheck lipids + ApoB\n4–8 weeks]:::admin
-    LABS2 --> GOAL2{LDL-C AND ApoB\nat target?}
+    S2A --> LABS2[Recheck lipids + ApoB<br>4–8 weeks]:::admin
+    LABS2 --> GOAL2{LDL-C AND ApoB<br>at target?}
 
-    GOAL2 -->|Yes| MAINTAIN2[Continue Statin +\nEzetimibe]:::success
-    GOAL2 -->|No| STEP3
+    GOAL2 -->|Yes| MAINTAIN2[Continue Statin +<br>Ezetimibe]:::entry
+    GOAL2 -->|No| NEXT[Continue to Part 2:<br>Step 3]:::link
 
-    subgraph STEP3 [Step 3: Add Advanced Agent]
-        S3DEC{Select Agent\nBased on Clinical\nScenario}:::assess
-        S3DEC -->|Max LDL-C reduction\nneeded| PCSK9[PCSK9 Inhibitor\nEvolocumab or\nAlirocumab]:::outcome
-        S3DEC -->|Adherence concern\nor prefers in-office| INCL[Inclisiran\nDay 0, Day 90,\nthen q6 months]:::outcome
-        S3DEC -->|Prefers oral\nor statin-intolerant| BEMP[Bempedoic Acid\n± Ezetimibe combo]:::outcome
-    end
+    MAINTAIN1 --> FU[Go to Part 5:<br>Follow-Up]:::link
+    MAINTAIN2 --> FU
+```
 
-    PCSK9 --> PA1[Prior Authorization\nRequired]:::admin
-    INCL --> PA2[Prior Authorization\nRequired]:::admin
+## Part 2 — Step 3: Add an Advanced Agent
+
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
+
+    IN[From Part 1:<br>not at target after Step 2]:::link --> S3DEC{Select Agent<br>Based on Clinical<br>Scenario}
+
+    S3DEC -->|Max LDL-C reduction<br>needed| PCSK9[PCSK9 Inhibitor<br>Evolocumab or<br>Alirocumab]:::treat
+    S3DEC -->|Adherence concern<br>or prefers in-office| INCL[Inclisiran<br>Day 0, Day 90,<br>then q6 months]:::treat
+    S3DEC -->|Prefers oral<br>or statin-intolerant| BEMP[Bempedoic Acid<br>± Ezetimibe combo]:::treat
+
+    PCSK9 --> PA1[Prior Authorization<br>Required]:::admin
+    INCL --> PA2[Prior Authorization<br>Required]:::admin
     BEMP --> LABS3
 
-    PA1 --> LABS3[Recheck lipids + ApoB\n4–8 weeks]:::admin
+    PA1 --> LABS3[Recheck lipids + ApoB<br>4–8 weeks]:::admin
     PA2 --> LABS3
 
-    LABS3 --> GOAL3{LDL-C AND ApoB\nat target?}
+    LABS3 --> GOAL3{LDL-C AND ApoB<br>at target?}
 
-    GOAL3 -->|Yes| MAINTAIN3[Continue Current\nRegimen]:::success
-    GOAL3 -->|No| STEP4
+    GOAL3 -->|Yes| MAINTAIN3[Continue Current<br>Regimen]:::entry
+    GOAL3 -->|No| NEXT[Continue to Part 3:<br>Step 4]:::link
+    MAINTAIN3 --> FU[Go to Part 5:<br>Follow-Up]:::link
+```
 
-    subgraph STEP4 [Step 4: Combination Advanced Therapy]
-        S4A[Add second advanced\nagent to regimen]:::urgent
-        S4B[Reassess:\n• Adherence\n• Secondary causes\n• FH evaluation]:::assess
-        S4A --> S4B
-    end
+## Part 3 — Step 4: Combination Advanced Therapy
 
-    STEP4 --> LABS4[Recheck lipids + ApoB\n4–8 weeks]:::admin
-    LABS4 --> GOAL4{LDL-C AND ApoB\nat target?}
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
 
-    GOAL4 -->|Yes| MAINTAIN4[Continue\nCombination Therapy]:::success
-    GOAL4 -->|No| STEP5
+    IN[From Part 2:<br>not at target after Step 3]:::link --> S4A
 
-    subgraph STEP5 [Step 5: Residual Risk]
-        S5A{Identify Residual\nRisk Source}:::assess
-        S5A -->|ApoB elevated\ndespite LDL-C at goal| S5B[Continue\nintensification]:::urgent
-        S5A -->|TG 135–499 +\nASCVD or high risk| S5C[Add Icosapent\nEthyl 2g BID]:::outcome
-        S5A -->|Lp*a* ≥ 125 nmol/L| S5D[Document as risk\nmodifier; maximize\nall other therapies]:::caution
-    end
+    S4A[Step 4 — Combination Therapy:<br>add second advanced<br>agent to regimen]:::urgent
+    S4B[Reassess:<br>• Adherence<br>• Secondary causes<br>• FH evaluation]:::assess
+    S4A --> S4B
 
-    MAINTAIN1 --> FU[Follow-Up\nPer Protocol]:::admin
-    MAINTAIN2 --> FU
-    MAINTAIN3 --> FU
-    MAINTAIN4 --> FU
-    STEP5 --> FU
+    S4B --> LABS4[Recheck lipids + ApoB<br>4–8 weeks]:::admin
+    LABS4 --> GOAL4{LDL-C AND ApoB<br>at target?}
 
-    FU --> FUTYPE{Patient\nStability}
+    GOAL4 -->|Yes| MAINTAIN4[Continue<br>Combination Therapy]:::entry
+    GOAL4 -->|No| NEXT[Continue to Part 4:<br>Step 5]:::link
+    MAINTAIN4 --> FU[Go to Part 5:<br>Follow-Up]:::link
+```
+
+## Part 4 — Step 5: Residual Risk
+
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
+
+    IN[From Part 3:<br>not at target after Step 4]:::link --> S5A{Identify Residual<br>Risk Source}
+
+    S5A -->|ApoB elevated<br>despite LDL-C at goal| S5B[Continue<br>intensification]:::urgent
+    S5A -->|TG 135–499 +<br>ASCVD or high risk| S5C[Add Icosapent<br>Ethyl 2g BID]:::treat
+    S5A -->|"Lp(a) ≥ 125 nmol/L"| S5D[Document as risk<br>modifier; maximize<br>all other therapies]:::caution
+
+    S5B --> FU[Go to Part 5:<br>Follow-Up]:::link
+    S5C --> FU
+    S5D --> FU
+```
+
+## Part 5 — Follow-Up
+
+```mermaid
+flowchart TD
+    classDef entry fill:#2d6a4f,stroke:#1b4332,color:#fff
+    classDef assess fill:#264653,stroke:#16303a,color:#fff
+    classDef treat fill:#1565c0,stroke:#0d47a1,color:#fff
+    classDef caution fill:#c2410c,stroke:#9a3412,color:#fff
+    classDef urgent fill:#b42318,stroke:#7a1a12,color:#fff
+    classDef admin fill:#5f6770,stroke:#454c53,color:#fff
+    classDef link fill:#fff,stroke:#264653,stroke-width:2px,stroke-dasharray:5 4,color:#264653
+
+    FU[Follow-Up<br>Per Protocol]:::admin --> FUTYPE{Patient<br>Stability}
     FUTYPE -->|Newly stabilized| FU3[q3–6 months]:::admin
     FUTYPE -->|Established stable| FU12[Annually]:::admin
     FUTYPE -->|Dose change| FU48[4–8 weeks]:::admin
@@ -123,3 +178,4 @@ PCSK9 inhibitors and inclisiran require prior authorization. See [11 — Prior A
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-09-29 | Split into smaller charts so text renders at full size; fixed line breaks that printed as literal escape codes; accessible color palette and shared legend |
