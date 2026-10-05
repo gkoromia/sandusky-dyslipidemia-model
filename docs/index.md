@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [In young adults, the formula used to calculate LDL cholesterol can hide higher risk]({% link lipidology/2026-10-04-in-young-adults-the-formula-used-to-calculate-ldl-cholestero.md %}) — 2026-10-05
 - [The 2026 cholesterol guideline tells doctors to keep statins going through cancer care]({% link lipidology/2026-09-27-the-2026-cholesterol-guideline-tells-doctors-to-keep-statins.md %}) — 2026-09-28
 - [A coronary calcium scan adds little to the new risk calculator except near the treatment line]({% link lipidology/2026-09-20-a-coronary-calcium-scan-adds-little-to-the-new-risk-calculat.md %}) — 2026-09-21
-- [Plozasiran (Redemplo) is approved for an inherited triglyceride disorder, but its use in common dyslipidemia is still unproven]({% link lipidology/2026-09-17-plozasiran-redemplo-is-approved-for-an-inherited-triglycerid.md %}) — 2026-09-17
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
