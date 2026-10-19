@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [Early evolocumab after a heart attack: faster LDL-C lowering, no one-year outcome benefit]({% link lipidology/2026-10-18-early-evolocumab-after-a-heart-attack-faster-ldl-c-lowering.md %}) — 2026-10-19
 - [High Lp(a) in midlife was linked to more aortic stenosis over the next 30 years]({% link lipidology/2026-10-04-high-lp-a-in-midlife-was-linked-to-more-aortic-stenosis-over.md %}) — 2026-10-05
 - [In young adults, the formula used to calculate LDL cholesterol can hide higher risk]({% link lipidology/2026-10-04-in-young-adults-the-formula-used-to-calculate-ldl-cholestero.md %}) — 2026-10-05
-- [The 2026 cholesterol guideline tells doctors to keep statins going through cancer care]({% link lipidology/2026-09-27-the-2026-cholesterol-guideline-tells-doctors-to-keep-statins.md %}) — 2026-09-28
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
