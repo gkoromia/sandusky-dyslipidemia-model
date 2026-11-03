@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [A stronger statin plus ezetimibe shrank coronary plaque more than atorvastatin alone in a small trial]({% link lipidology/2026-11-01-a-stronger-statin-plus-ezetimibe-shrank-coronary-plaque-more.md %}) — 2026-11-03
 - [Lerochol adds a monthly PCSK9-targeting option for LDL-C lowering]({% link lipidology/2026-10-22-lerochol-adds-a-monthly-pcsk9-targeting-option-for-ldl-c-low.md %}) — 2026-10-22
 - [Early evolocumab after a heart attack: faster LDL-C lowering, no one-year outcome benefit]({% link lipidology/2026-10-18-early-evolocumab-after-a-heart-attack-faster-ldl-c-lowering.md %}) — 2026-10-19
-- [High Lp(a) in midlife was linked to more aortic stenosis over the next 30 years]({% link lipidology/2026-10-04-high-lp-a-in-midlife-was-linked-to-more-aortic-stenosis-over.md %}) — 2026-10-05
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
