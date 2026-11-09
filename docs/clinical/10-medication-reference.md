@@ -3,8 +3,8 @@ layout: default
 title: "10 — Medication Reference"
 parent: Clinical
 nav_order: 10
-version: "1.1.0"
-last_updated: "2026-09-17"
+version: "1.2.0"
+last_updated: "2026-11-09"
 ---
 
 # 10 — Medication Reference
@@ -211,7 +211,7 @@ last_updated: "2026-09-17"
 | Clinical outcome | ↓ acute pancreatitis, OR 0.17 (95% CI 0.03–0.94) [14] |
 | Common adverse events | Abdominal pain, nasopharyngitis, headache, nausea [14] |
 | Monitoring | Fasting TG; glycemia in patients with prediabetes or diabetes [14]; LDL-C and ApoB (LDL-C may rise without ApoB change at higher doses) [15] |
-| Off-label | Multifactorial severe hypertriglyceridemia (phase 3 data pending full publication); not indicated for mixed dyslipidemia or ASCVD risk reduction [16] |
+| Off-label | Multifactorial severe hypertriglyceridemia: SHASTA-3/4 (n = 757) median TG −79% and −81% at 12 months; TG < 500 mg/dL in 91% and 93% vs 51% and 50%; pooled adjudicated acute pancreatitis 1 vs 5 per 100 patient-years (RR 0.22; P = 0.008); adverse events 73% in both arms (abstract-level) [17]. Not indicated for mixed dyslipidemia or ASCVD risk reduction [16] |
 
 ## 9.0 Niacin (Extended-Release)
 
@@ -266,6 +266,7 @@ Obicetrapib (CETP inhibitor) and Lp(a)-targeted therapies (muvalaplin, lepodisir
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
 | 1.1.0 | 2026-09-17 | Added plozasiran (summary table and Section 8.3) |
+| 1.2.0 | 2026-11-09 | Section 8.3: added SHASTA-3/4 results to off-label row |
 
 ---
 
@@ -287,3 +288,4 @@ Obicetrapib (CETP inhibitor) and Lp(a)-targeted therapies (muvalaplin, lepodisir
 14. Watts GF, Rosenson RS, Hegele RA, et al. Plozasiran for managing persistent chylomicronemia and pancreatitis risk (PALISADE). *N Engl J Med*. 2025;392(2):127–137.
 15. Gaudet D, Pall D, Watts GF, et al. Plozasiran (ARO-APOC3) for severe hypertriglyceridemia: the SHASTA-2 randomized clinical trial. *JAMA Cardiol*. 2024;9(7):620–630.
 16. Ballantyne CM, Vasas S, Azizad M, et al. Plozasiran, an RNA interference agent targeting APOC3, for mixed hyperlipidemia (MUIR). *N Engl J Med*. 2024;391(10):899–912.
+17. Watts GF, et al. Plozasiran for severe hypertriglyceridemia and risk of pancreatitis (SHASTA-3 and SHASTA-4). *N Engl J Med*. 2026. doi:10.1056/nejmoa2610014.

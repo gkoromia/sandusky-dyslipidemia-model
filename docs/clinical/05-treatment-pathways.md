@@ -3,8 +3,8 @@ layout: default
 title: "05 — Treatment Pathways"
 parent: Clinical
 nav_order: 5
-version: "1.1.0"
-last_updated: "2026-09-17"
+version: "1.2.0"
+last_updated: "2026-11-09"
 ---
 
 # 05 — Treatment Pathways
@@ -277,7 +277,7 @@ Plozasiran is a GalNAc-conjugated siRNA that reduces hepatic apolipoprotein C-II
 | Monitoring | Fasting TG; glycemia in patients with prediabetes or diabetes (hyperglycemia reported in PALISADE) [21] |
 | Not indicated | ASCVD risk reduction; mixed dyslipidemia (TG 150–499 mg/dL) outside a trial, as no outcomes data exist [24] |
 
-- **Multifactorial severe hypertriglyceridemia (non-FCS):** Off-label. SHASTA-2 showed a placebo-adjusted TG reduction of −57% at the highest dose, with 90.6% of treated patients reaching TG < 500 mg/dL [23]. Revisit after full publication of SHASTA-3/4 and any label expansion.
+- **Multifactorial severe hypertriglyceridemia (non-FCS):** Off-label. SHASTA-3 and SHASTA-4 (n = 757, 2:1 randomization, 25 mg at 0, 3, 6, and 9 months): median TG change at 12 months −79% and −81% (placebo-adjusted −45 and −47 percentage points); TG < 500 mg/dL in 91% and 93% vs 51% and 50%; pooled adjudicated acute pancreatitis 1 vs 5 per 100 patient-years (RR 0.22; P = 0.008); adverse events 73% in both arms [25]. Based on the abstract; detailed safety and secondary lipid data are not yet reviewed. Revisit on label expansion. Earlier dose-finding: SHASTA-2 placebo-adjusted TG −57% at the highest dose, with 90.6% reaching TG < 500 mg/dL [23].
 - **LDL-C:** May rise at higher doses without an increase in ApoB (SHASTA-2, 50 mg: LDL-C +60% placebo-adjusted; non-HDL-C −20%) [23]. Continue to manage atherogenic risk by ApoB and LDL-C per Section 1.0.
 - **Does not replace** statin or other LDL-C-lowering therapy.
 
@@ -316,12 +316,14 @@ The following stepwise approach applies to patients not at their risk-appropriat
 
 - Initiate or uptitrate to the highest tolerated intensity statin
 - Recheck lipid panel (including ApoB if indicated) in 4–8 weeks
+- Do not discontinue a statin by default in adults older than 70 on primary prevention with multimorbidity. In STREAM (n > 1,880), discontinuation was noninferior for 2-year restricted mean event-free survival (−2.0 weeks), but primary-outcome events were 12.7% vs 9.2% and serious adverse events 43% vs 39.8%; the data and safety monitoring board advised discussing re-initiation [26]. Discontinue only through shared decision-making that accounts for life expectancy and treatment burden. Source is a news summary of the NEJM publication; the full paper has not been reviewed.
 
 ### Step 2: Add Ezetimibe
 {: .text-purple-300 }
 
 - If LDL-C and/or ApoB not at target → add ezetimibe 10 mg daily
 - Recheck in 4–8 weeks
+- Stepwise addition is supported by eZ-PAVE (n = 3,048, ASCVD, open-label): with protocol-directed titration to goal, 3-year composite events were 8.5% with upfront statin plus ezetimibe vs 7.9% with statin monotherapy (not significant), with ezetimibe added in 25–34% of the monotherapy arm [27]. Upfront combination remains reasonable when LDL-C is far above goal.
 
 ### Step 3: Add PCSK9 Inhibitor, Inclisiran, or Bempedoic Acid
 {: .text-purple-300 }
@@ -354,6 +356,7 @@ The following stepwise approach applies to patients not at their risk-appropriat
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
 | 1.1.0 | 2026-09-17 | Added FCS row to Section 9.2 and Section 9.4 (plozasiran) |
+| 1.2.0 | 2026-11-09 | Updated Section 9.4 non-FCS bullet with SHASTA-3/4; added statin continuation (STREAM) and eZ-PAVE notes to Section 11.0 |
 
 ---
 
@@ -383,3 +386,6 @@ The following stepwise approach applies to patients not at their risk-appropriat
 22. Syed YY. Plozasiran: first approval. *Drugs*. 2026;86(5):753–758.
 23. Gaudet D, Pall D, Watts GF, et al. Plozasiran (ARO-APOC3) for severe hypertriglyceridemia: the SHASTA-2 randomized clinical trial. *JAMA Cardiol*. 2024;9(7):620–630.
 24. Ballantyne CM, Vasas S, Azizad M, et al. Plozasiran, an RNA interference agent targeting APOC3, for mixed hyperlipidemia (MUIR). *N Engl J Med*. 2024;391(10):899–912.
+25. Watts GF, et al. Plozasiran for severe hypertriglyceridemia and risk of pancreatitis (SHASTA-3 and SHASTA-4). *N Engl J Med*. 2026. doi:10.1056/nejmoa2610014.
+26. STREAM, eZ-PAVE add new insights into statin therapy treatment. American College of Cardiology. 2026. https://www.acc.org/Latest-in-Cardiology/Articles/2026/11/06/14/37/sat-445pm-statins-aha-2026.
+27. Lee SH, et al. Statin-ezetimibe combination therapy versus statin monotherapy in atherosclerotic cardiovascular disease: prespecified secondary analysis of the Ez-PAVE trial. *Circulation*. 2026. doi:10.1161/circulationaha.126.083811.
