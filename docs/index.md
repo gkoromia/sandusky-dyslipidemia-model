@@ -75,9 +75,9 @@ Summaries of practice-relevant lipid literature, updated as it appears.
 
 Most recent updates:
 
+- [Two statin trials from AHA 2026: stopping in older adults meant more events, and starting with ezetimibe did not beat adding it later]({% link lipidology/2026-11-08-two-statin-trials-from-aha-2026-stopping-in-older-adults-mea.md %}) — 2026-11-09
 - [Plozasiran lowered triglycerides and pancreatitis in two phase 3 trials in severe hypertriglyceridemia]({% link lipidology/2026-11-08-plozasiran-lowered-triglycerides-and-pancreatitis-in-two-pha.md %}) — 2026-11-09
 - [A stronger statin plus ezetimibe shrank coronary plaque more than atorvastatin alone in a small trial]({% link lipidology/2026-11-01-a-stronger-statin-plus-ezetimibe-shrank-coronary-plaque-more.md %}) — 2026-11-03
-- [Lerochol adds a monthly PCSK9-targeting option for LDL-C lowering]({% link lipidology/2026-10-22-lerochol-adds-a-monthly-pcsk9-targeting-option-for-ldl-c-low.md %}) — 2026-10-22
 
 <!-- LIPIDOLOGY-TEASER:END -->
 
