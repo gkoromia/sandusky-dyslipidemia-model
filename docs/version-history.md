@@ -2,8 +2,8 @@
 layout: default
 title: Version History
 nav_order: 9
-version: "1.0.12"
-last_updated: "2026-11-03"
+version: "1.0.13"
+last_updated: "2026-11-09"
 ---
 
 # Version History
@@ -13,6 +13,7 @@ Release history of The Sandusky Dyslipidemia Model site, newest first. Each rele
 
 | Version | Date       | Description     |
 | :------ | :--------- | :-------------- |
+| 1.0.13  | 2026-11-09 | Latest in Lipidology updates |
 | 1.0.12  | 2026-11-03 | Latest in Lipidology updates |
 | 1.0.11  | 2026-10-22 | Latest in Lipidology updates |
 | 1.0.10  | 2026-10-19 | Latest in Lipidology updates |
