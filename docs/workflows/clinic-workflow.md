@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Clinic Workflow"
+seo_title: "Lipid Clinic Workflow: Referral to Follow-Up"
+description: "Flowcharts of the patient journey through a lipid clinic, from referral and scheduling to the initial visit, treatment plan and follow-up cycle."
 parent: Workflows
 nav_order: 1
 version: "1.1.0"

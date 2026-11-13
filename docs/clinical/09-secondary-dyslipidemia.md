@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "09 — Secondary Dyslipidemia"
+seo_title: "Secondary Causes of Dyslipidemia: A Screening Approach"
+description: "Systematic screening for secondary causes of dyslipidemia, including hypothyroidism, diabetes, chronic kidney disease, liver disease, medications and lifestyle factors."
 parent: Clinical
 nav_order: 9
 version: "1.0.0"

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Understanding Your Lab Results"
+seo_title: "Understanding Your Cholesterol Lab Results: A Patient Guide"
+description: "A plain-language guide to your lipid panel, advanced tests such as ApoB and Lp(a), and the coronary artery calcium score."
 parent: Patient Materials
 nav_order: 3
 version: "1.0.0"

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Clinical
+seo_title: "Clinical Protocols for Dyslipidemia Management"
+description: "Twelve provider-facing protocols for an outpatient lipid clinic, from referral and risk stratification through treatment, prior authorization and follow-up."
 nav_order: 2
 has_children: true
 version: "1.0.0"

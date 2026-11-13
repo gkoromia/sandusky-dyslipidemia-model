@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "10 — Medication Reference"
+seo_title: "Lipid-Lowering Medication Reference: Dosing and Monitoring"
+description: "Dosing, monitoring and interaction reference for statins, ezetimibe, PCSK9 inhibitors, inclisiran, bempedoic acid, icosapent ethyl and fibrates."
 parent: Clinical
 nav_order: 10
 version: "1.2.0"

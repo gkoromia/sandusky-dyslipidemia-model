@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Glossary
+seo_title: "Lipidology Glossary"
+description: "Definitions of the clinical lipidology terms used throughout The Sandusky Dyslipidemia Model."
 nav_order: 8
 version: "1.0.0"
 last_updated: "2026-03-30"

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "03 — Initial Assessment"
+seo_title: "Initial Assessment of Dyslipidemia: History, Exam and Labs"
+description: "What to cover at a first lipid clinic visit: history, physical examination, laboratory testing and documentation of cardiovascular risk factors."
 parent: Clinical
 nav_order: 3
 version: "1.0.0"

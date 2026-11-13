@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "PREVENT Calculator"
+seo_title: "AHA PREVENT Risk Calculator: 10- and 30-Year CVD Risk"
+description: "About the AHA PREVENT equations for 10-year and 30-year cardiovascular risk: required inputs and the risk categories used in the 2026 ACC/AHA guideline."
 parent: Tools
 nav_order: 3
 version: "1.0.0"

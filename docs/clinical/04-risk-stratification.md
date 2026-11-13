@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "04 — Risk Stratification"
+seo_title: "Cardiovascular Risk Stratification: PREVENT, ApoB, Lp(a) and CAC"
+description: "A stepwise approach to cardiovascular risk: established ASCVD, the AHA PREVENT equations, risk enhancers, ApoB, lipoprotein(a) and coronary artery calcium scoring."
 parent: Clinical
 nav_order: 4
 version: "1.0.0"

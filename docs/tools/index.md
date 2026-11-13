@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Tools
+seo_title: "Interactive Clinical Tools for Lipid Management"
+description: "Browser-based clinical decision support tools for lipid management, including the AHA PREVENT cardiovascular risk calculator. No data is transmitted or stored."
 nav_order: 4
 has_children: true
 version: "1.0.0"

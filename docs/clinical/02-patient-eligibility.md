@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "02 — Patient Eligibility"
+seo_title: "Lipid Clinic Referral Criteria and Patient Eligibility"
+description: "Who should be referred to a lipid clinic: inclusion and exclusion criteria, plus how referrals are triaged and scheduled."
 parent: Clinical
 nav_order: 2
 version: "1.1.0"

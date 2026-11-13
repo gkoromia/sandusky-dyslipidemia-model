@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "FH Pathway Flow"
+seo_title: "Familial Hypercholesterolemia Flowchart: Diagnosis, Cascade Screening, Treatment"
+description: "Flowcharts for familial hypercholesterolemia: making the diagnosis, cascade screening of relatives and treatment."
 parent: Workflows
 nav_order: 5
 version: "1.1.0"

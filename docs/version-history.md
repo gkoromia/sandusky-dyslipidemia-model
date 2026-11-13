@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Version History
+description: "Release history of The Sandusky Dyslipidemia Model site, newest first."
 nav_order: 9
 version: "1.0.13"
 last_updated: "2026-11-09"

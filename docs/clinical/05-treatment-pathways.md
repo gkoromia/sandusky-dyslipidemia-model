@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "05 — Treatment Pathways"
+seo_title: "Lipid-Lowering Treatment Pathways and Escalation Algorithm"
+description: "Stepwise lipid-lowering therapy: lifestyle, statins, ezetimibe, PCSK9 inhibitors, bempedoic acid, inclisiran and icosapent ethyl, with a treatment escalation algorithm."
 parent: Clinical
 nav_order: 5
 version: "1.2.0"

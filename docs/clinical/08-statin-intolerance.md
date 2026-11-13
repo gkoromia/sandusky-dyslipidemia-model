@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "08 — Statin Intolerance"
+seo_title: "Statin Intolerance: Evaluation, Rechallenge and Alternatives"
+description: "A protocol for statin intolerance: definition, initial evaluation, a one-time rechallenge and the statin-free regimen used when rechallenge fails."
 parent: Clinical
 nav_order: 8
 version: "1.0.0"

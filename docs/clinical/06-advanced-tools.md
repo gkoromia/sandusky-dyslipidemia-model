@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "06 — Advanced Tools"
+seo_title: "Advanced Lipid Testing: ApoB, NMR LipoProfile, Lp(a), CAC and CCTA"
+description: "When to order and how to interpret ApoB, the NMR LipoProfile, lipoprotein(a), coronary artery calcium scoring, carotid duplex and coronary CT angiography."
 parent: Clinical
 nav_order: 6
 version: "1.0.0"

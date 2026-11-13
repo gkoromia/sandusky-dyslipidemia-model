@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Advanced Tools Decision Flow"
+seo_title: "Which Advanced Lipid Test to Order: Decision Flowchart"
+description: "Flowcharts for choosing between ApoB, Lp(a), the NMR LipoProfile, CAC scoring, carotid duplex and CCTA based on the clinical question."
 parent: Workflows
 nav_order: 4
 version: "1.1.0"

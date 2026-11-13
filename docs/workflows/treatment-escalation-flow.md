@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Treatment Escalation Flow"
+seo_title: "Lipid Treatment Escalation Flowchart"
+description: "Flowcharts of stepwise lipid-lowering escalation: statin, ezetimibe, advanced agents, combination therapy and residual risk, driven by LDL-C and ApoB targets."
 parent: Workflows
 nav_order: 3
 version: "1.1.0"

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "11 — Prior Authorization"
+seo_title: "Prior Authorization for PCSK9 Inhibitors and Inclisiran"
+description: "Documentation requirements, templates, the appeals process and CPT/HCPCS codes for PCSK9 inhibitor and inclisiran prior authorization."
 parent: Clinical
 nav_order: 11
 version: "1.0.0"

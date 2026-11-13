@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Workflows
+seo_title: "Clinical Workflow Flowcharts for Lipid Management"
+description: "Flowcharts for lipid clinic decision-making: clinic workflow, risk stratification, treatment escalation, FH, statin intolerance and advanced testing."
 nav_order: 3
 has_children: true
 version: "1.1.0"

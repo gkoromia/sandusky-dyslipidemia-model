@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "What Is Dyslipidemia?"
+seo_title: "What Is Dyslipidemia? A Patient Guide"
+description: "A plain-language explanation of dyslipidemia, the fats in your blood, why you were referred to a lipid clinic and what happens at your visit."
 parent: Patient Materials
 nav_order: 1
 version: "1.0.0"

@@ -1,8 +1,25 @@
 title: "The Sandusky Dyslipidemia Model"
 description: "A comprehensive clinical model for outpatient dyslipidemia management based on the 2026 ACC/AHA/Multisociety Guidelines"
 theme: just-the-docs
-url: ""
+url: "https://www.sanduskymodel.com"
 baseurl: ""
+lang: en-US
+author: "George Augustine Koromia, MD, MMCi, FACC"
+author_url: "https://www.koromia.com"
+
+# Extensionless page URLs (/clinical/05-treatment-pathways). Cloudflare Pages
+# serves pages at these addresses and redirects the .html form to them, so the
+# canonical URL, sitemap and internal links must use them too.
+permalink: /:path/:basename
+
+# Front matter for generated pages that another tool rewrites
+# (lipid-researcher regenerates lipidology/index.md on every publish).
+defaults:
+  - scope:
+      path: "lipidology/index.md"
+    values:
+      seo_title: "Latest in Lipidology: Summaries of New Lipid Research"
+      description: "Running summaries of new lipidology trials, drug approvals and guideline changes, each linked to its primary sources."
 
 # Mermaid diagram support
 mermaid:

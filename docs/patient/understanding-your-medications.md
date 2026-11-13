@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Understanding Your Medications"
+seo_title: "Understanding Your Cholesterol Medications: A Patient Guide"
+description: "A plain-language guide to cholesterol medications: statins, ezetimibe, PCSK9 inhibitors, inclisiran, bempedoic acid and icosapent ethyl."
 parent: Patient Materials
 nav_order: 2
 version: "1.0.0"

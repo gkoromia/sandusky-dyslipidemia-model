@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Risk Stratification Flow"
+seo_title: "Risk Stratification Flowchart: PREVENT, Risk Enhancers and CAC"
+description: "Flowcharts for sorting patients into cardiovascular risk categories using ASCVD status, LDL-C, the PREVENT score, risk enhancers and the coronary calcium score."
 parent: Workflows
 nav_order: 2
 version: "1.1.0"

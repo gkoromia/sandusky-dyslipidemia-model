@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Lifestyle Recommendations"
+seo_title: "Lifestyle Changes to Lower Cholesterol: A Patient Guide"
+description: "A plain-language guide to heart-healthy eating, physical activity, weight management, quitting smoking, alcohol and supplements."
 parent: Patient Materials
 nav_order: 4
 version: "1.0.0"

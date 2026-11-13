@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "07 — FH Pathway"
+seo_title: "Familial Hypercholesterolemia Pathway: Diagnosis and Treatment"
+description: "How to recognize, diagnose and treat familial hypercholesterolemia: Dutch Lipid Clinic Network score, genetic testing, cascade screening, and HeFH and HoFH therapy."
 parent: Clinical
 nav_order: 7
 version: "1.0.0"

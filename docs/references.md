@@ -1,6 +1,8 @@
 ---
 layout: default
 title: References
+seo_title: "References"
+description: "The numbered bibliography for The Sandusky Dyslipidemia Model: guidelines, risk assessment, LDL-C, ApoB, lipoprotein(a), coronary calcium and advanced lipid testing."
 nav_order: 7
 version: "1.0.0"
 last_updated: "2026-03-30"

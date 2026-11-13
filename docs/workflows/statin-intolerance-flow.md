@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Statin Intolerance Flow"
+seo_title: "Statin Intolerance Flowchart"
+description: "Flowcharts for statin intolerance: ruling out secondary causes, checking CK, the one-time rechallenge and the statin-free regimen."
 parent: Workflows
 nav_order: 6
 version: "1.1.0"

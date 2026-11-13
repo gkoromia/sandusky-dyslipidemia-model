@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Home
+seo_title: "The Sandusky Dyslipidemia Model: Lipid Clinic Protocols, Workflows and Tools"
+description: "An open clinical model for running an outpatient lipid clinic: protocols, decision flowcharts, a PREVENT risk calculator and patient handouts, built on the 2026 ACC/AHA dyslipidemia guideline."
 nav_order: 1
 version: "1.0.8"
 last_updated: "2026-09-29"

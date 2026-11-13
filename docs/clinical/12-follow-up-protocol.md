@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "12 — Follow-Up Protocol"
+seo_title: "Lipid Clinic Follow-Up: Monitoring, Escalation and Discharge"
+description: "Follow-up schedule, visit components, drug-specific monitoring, adherence assessment, and criteria for escalating treatment or discharging to the referring provider."
 parent: Clinical
 nav_order: 12
 version: "1.0.0"

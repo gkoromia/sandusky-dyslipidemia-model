@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- assign sitemap_pages = site.html_pages | sort: "url" -%}
+{%- for p in sitemap_pages -%}
+{%- if p.url == "/404.html" or p.sitemap == false -%}{%- continue -%}{%- endif %}
+  <url>
+    <loc>{{ p.url | absolute_url | xml_escape }}</loc>
+    {%- if p.last_updated %}
+    <lastmod>{{ p.last_updated }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endfor %}
+</urlset>

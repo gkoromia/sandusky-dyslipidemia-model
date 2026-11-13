@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "01 — Clinic Overview"
+seo_title: "Lipid Clinic Overview: Mission, Scope and Staffing"
+description: "Mission, treatment philosophy, scope of practice, staffing model, visit structure and referral process for a specialized outpatient dyslipidemia clinic."
 parent: Clinical
 nav_order: 1
 version: "1.0.0"

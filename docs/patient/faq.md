@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Frequently Asked Questions"
+seo_title: "Cholesterol FAQ for Patients: Statins, ApoB, Lp(a) and FH"
+description: "Answers to common patient questions about cholesterol and risk, statins and other medications, ApoB, Lp(a), the NMR LipoProfile and familial hypercholesterolemia."
 parent: Patient Materials
 nav_order: 5
 version: "1.0.0"

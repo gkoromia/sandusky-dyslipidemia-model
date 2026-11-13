@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Patient Materials
+seo_title: "Patient Guides to Cholesterol and Dyslipidemia"
+description: "Plain-language patient handouts on cholesterol: what dyslipidemia is, how to read lab results, how the medications work, lifestyle changes and common questions."
 nav_order: 5
 has_children: true
 version: "1.0.0"
