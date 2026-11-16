@@ -5,8 +5,8 @@ seo_title: "Cardiovascular Risk Stratification: PREVENT, ApoB, Lp(a) and CAC"
 description: "A stepwise approach to cardiovascular risk: established ASCVD, the AHA PREVENT equations, risk enhancers, ApoB, lipoprotein(a) and coronary artery calcium scoring."
 parent: Clinical
 nav_order: 4
-version: "1.0.0"
-last_updated: "2026-03-30"
+version: "1.1.0"
+last_updated: "2026-11-16"
 ---
 
 # 04 — Risk Stratification
@@ -144,13 +144,14 @@ The following thresholds are used in this clinic, aligned with the 2026 ACC/AHA 
 
 ## 6.0 Lipoprotein(a) Assessment
 
-Lipoprotein(a) \[Lp(a)\] is a genetically determined, largely immutable risk factor for ASCVD and calcific aortic valve disease [6]. It is measured once per lifetime (repeat testing only if the initial result was borderline and a different assay is used).
+Lipoprotein(a) \[Lp(a)\] is a genetically determined, largely immutable risk factor for ASCVD and calcific aortic valve disease [6]. It is measured once per lifetime (repeat testing only if the initial result was borderline and a different assay is used, or if it was drawn during an acute coronary syndrome and falls near a threshold; see Section 6.1).
 
 ### 6.1 Measurement
 
 - **Preferred unit:** nmol/L (mass-independent, isoform-insensitive)
 - **Threshold for elevated risk:** ≥ 125 nmol/L
 - **When to measure:** All new patients at The Sandusky Dyslipidemia Model clinic (one-time measurement)
+- **Timing after ACS:** Lp(a) drawn during the index ACS admission may underestimate the steady-state concentration. In a meta-analysis of 16 studies (n = 1,396), mean Lp(a) relative to the initial post-ACS value was +2.5% at 24 hours (not significant), +44.0% at 7 to 14 days, +28.3% at 1 month, and +22.2% at 3 to 6 months; rises > 25 nmol/L occurred in 17% to 22% of patients by 3 to 6 months [13]. Repeat Lp(a) at 1 to 3 months if the index-ACS value is within approximately 25 nmol/L of a decision threshold (75 or 125 nmol/L). A value clearly above threshold does not require repeat. The 25 nmol/L window is an operational interpretation of "near a decision threshold" and is not specified in the source. Abstract-level evidence from heterogeneous observational cohorts.
 
 ### 6.2 Clinical Action on Elevated Lp(a)
 
@@ -307,6 +308,7 @@ After completing the steps above, the provider assigns a **final integrated risk
 | Version | Date | Description |
 |:--------|:-----|:------------|
 | 1.0.0 | 2026-03-30 | Initial release |
+| 1.1.0 | 2026-11-16 | Section 6.1: added repeat-testing guidance for Lp(a) drawn during ACS |
 
 ---
 
@@ -324,3 +326,4 @@ After completing the steps above, the provider assigns a **final integrated risk
 10. Budoff MJ, Young R, Burke G, et al. Ten-year association of coronary artery calcium with atherosclerotic cardiovascular disease (ASCVD) events: the Multi-Ethnic Study of Atherosclerosis (MESA). *Eur Heart J*. 2018;39(25):2401–2408.
 11. Jeyarajah EJ, Cromwell WC, Otvos JD. Lipoprotein particle analysis by nuclear magnetic resonance spectroscopy. *Clin Lab Med*. 2006;26(4):847–870.
 12. Otvos JD, Mora S, Shalaurova I, et al. Clinical implications of discordance between low-density lipoprotein cholesterol and particle number. *J Clin Lipidol*. 2011;5(2):105–113.
+13. Shokravi A, et al. Temporal changes in lipoprotein(a) following acute coronary syndrome: a systematic review and meta-analysis. *Eur J Prev Cardiol*. 2026. doi:10.1093/eurjpc/zwag579.
